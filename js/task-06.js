@@ -3,8 +3,13 @@ inpetEl.addEventListener('blur', lengthWord)
 
 
 function lengthWord(event) {
-    Number(inpetEl.dataset.length) === event.currentTarget.value.length ?
-        inpetEl.classList.add('valid') : inpetEl.classList.add('invalid');
+    if (this.getAttribute('data-length') > this.value.length) { 
+        this.classList.remove('valid');
+        this.classList.add('invalid');
+    } else {
+        this.classList.remove('invalid');
+        this.classList.add('valid');
+    }
     if (event.currentTarget.value === '') {
         inpetEl.classList.remove('valid' && 'invalid');
     }
