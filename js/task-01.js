@@ -1,5 +1,5 @@
-const itemsNumberEl = document.querySelectorAll('.item');
-console.log('Number of categories:', itemsNumberEl.length);
+const itemsNumberEl = document.querySelectorAll(".item");
+console.log("Number of categories:", itemsNumberEl.length);
 
 // ==================1 варіант===========================
 // const headerEl = document.querySelectorAll('li > h2');
@@ -18,9 +18,9 @@ console.log('Number of categories:', itemsNumberEl.length);
 // console.log('Elements:', listChildrenEl[2].children.length);
 
 // ==================2 варіант===========================
-const ul = document.querySelectorAll('#categories > li')
+const ul = document.querySelectorAll("#categories > li");
 
-ul.forEach(el => {
-    console.log("Категорія:", el.firstElementChild.textContent);
-    console.log("Кількість елементів:", el.lastElementChild.children.length);
+ul.forEach((el) => {
+  console.log("Категорія:", el.firstElementChild.textContent);
+  console.log("Кількість елементів:", el.lastElementChild.children.length);
 });

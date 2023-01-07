@@ -1,12 +1,14 @@
-const render = document.querySelector('button[data-create]');
-const destroy = document.querySelector('button[data-destroy]');
+const render = document.querySelector("button[data-create]");
+const destroy = document.querySelector("button[data-destroy]");
 const boxes = document.querySelector("#boxes");
+const input = document.querySelector("#controls input");
+
 render.addEventListener("click", getAmount);
 destroy.addEventListener("click", destroyBoxes);
 
 function getAmount() {
-  const amount = document.querySelector("#controls input").value;
-  createBoxes(amount);
+  const {value} = input;
+  createBoxes(value);
 }
 
 function createBoxes(amount) {
@@ -18,10 +20,7 @@ function createBoxes(amount) {
     width: ${size}px;
     height: ${size}px; 
     background-color: rgba( ${random()} , ${random()} , ${random()} )`;
-    // div.style.width = `${size}px`;
-    // div.style.height = `${size}px`;
-    // div.style.backgroundColor = `rgba( ${random()} , ${random()} , ${random()}`;
-    boxes.appendChild(div);
+    boxes.append(div);
   }
 }
 
